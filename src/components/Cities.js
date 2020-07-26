@@ -4,7 +4,7 @@ import { Switch, Route, withRouter } from "react-router";
 import CityList from "./CityList";
 import Weather from "./Weather/index";
 
-const API_CITIES = "http://localhost:8888//weather-service/weathers/cities";
+const API_CITIES = "http://localhost:8888/weather-service/available-cities";
 
 class Cities extends React.Component {
   state = {
@@ -38,7 +38,6 @@ class Cities extends React.Component {
       <div>
         <h1>Cities</h1>
         <p>City list</p>
-
         <Switch>
           <Route path={`${match.path}/:cityName`} component={Weather} />
           <Route
